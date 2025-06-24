@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Layout from '../components/ProLayout'
 import ProjectCard from '../components/ProjectCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { FiMail,FiGithub, FiDownload, FiLinkedin } from 'react-icons/fi';
+import { FiMail,FiGithub, FiDownload, FiLinkedin, FiX, FiFacebook } from 'react-icons/fi';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
@@ -52,8 +52,32 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                 <h1 className="display-4 nameHeader">Milan Avorque</h1>
                 <p className="lead">Web Developer • IT Support</p>
             </header>
-
-            <section id="about" className="mb-5">
+            <section id="intro" className='mb-5'>
+                <h5 className='text-center'>
+                    Hi! I’m Milan Avorque — a web developer and IT support specialist with a background in both frontend and backend technologies.
+                    I spent a year doing full-time PHP and jQuery development before transitioning into IT support, where I’ve been solving tech issues for the past three years. 
+                    I still take on occasional freelance dev work, mostly with PHP and CodeIgniter. Currently learning Next.js, exploring better UX, and always open to part-time, remote opportunities.
+                </h5>
+                <p className='text-center'>
+                    For now, I’m currently looking for <strong>home-based</strong> or <strong>part-time</strong> roles due to personal limitations,
+                    while I continue my current position to manage financial commitments.
+                </p>
+                <div className="d-flex justify-content-center align-items-center gap-3">
+                    <a href="mailto:milan.avorque@gmail.com" className="footer-link">
+                        <FiMail size={20} /> Email
+                    </a>
+                    <a href="https://github.com/atsukiri" target="_blank" className="footer-link" rel="noopener noreferrer">
+                        <FiGithub size={20} /> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className="footer-link" rel="noopener noreferrer">
+                        <FiLinkedin size={20} /> LinkedIn
+                    </a>
+                    <a href="/resume.pdf" target="_blank" className="footer-link">
+                        <FiDownload size={20} /> Resume
+                    </a>
+                </div>
+            </section>
+            <section id="about" className="mb-5 d-none">
                 <h1 className="sectionHeader">About Me</h1>
                 <hr />
                 <p>
@@ -152,20 +176,6 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
             </section>
 
             <footer className="py-4 mt-auto text-center">
-                <div className="d-flex justify-content-center align-items-center gap-3">
-                    <a href="mailto:milan.avorque@gmail.com" className="footer-link">
-                    <FiMail size={20} /> Email
-                    </a>
-                    <a href="https://github.com/atsukiri" target="_blank" className="footer-link" rel="noopener noreferrer">
-                    <FiGithub size={20} /> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className="footer-link" rel="noopener noreferrer">
-                    <FiLinkedin size={20} /> LinkedIn
-                    </a>
-                    <a href="/resume.pdf" target="_blank" className="footer-link">
-                    <FiDownload size={20} /> Resume
-                    </a>
-                </div>
                 <hr className='my-2' />
                 <p className="text-gold" style={{ fontSize: '0.875rem' }}>
                     © <Link href="/">Milan Avorque</Link>  - 2025 | Last updated: { formattedDate } 
