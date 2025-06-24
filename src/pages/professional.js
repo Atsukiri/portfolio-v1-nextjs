@@ -85,9 +85,17 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                  <div className='row'>
                     {Object.entries(skillsData).map(([cat, arr]) => (
                         <div key={cat} className="mb-4 col-md-6 text-xs-center text-md-left">
-                            <h3>{cat}</h3>
+                            <h3 className=''>{cat}</h3>
+                            <hr className='my-2' />
                             <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
-                                {arr.map(skill => <SkillWheel key={skill.name} {...skill} />)}
+                                {arr.map(skill => <div className='mb-2' key={skill.name}>
+                                    <div className='d-flex align-items-center'>
+                                        <span style={{fontSize:10}} className={'badge bg-'+(skill.experienceLevel == "Proficient" ? "warning text-dark" : (skill.experienceLevel == "Intermediate" ? "primary" : "success"))+' d-inline badge-pill'}>{skill.experienceLevel}</span>
+                                        <h5 className='ms-1 m-0 d-inline fw-bold'>{skill.name}</h5>
+                                    </div>
+                                    <div>{skill.description}</div>
+                                </div>)} 
+                                {/* <SkillWheel key={skill.name} {...skill} /> */}
                             </div>  
                         </div>
                 ))}

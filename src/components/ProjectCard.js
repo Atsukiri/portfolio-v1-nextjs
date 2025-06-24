@@ -5,7 +5,7 @@ export default function ProjectCard({ title, description, image, liveUrl, repoUr
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="card h-100 shadow-sm">
         {image && (
-          <Image src={image} className="card-img-top" alt={`${title} screenshot`} />
+          <Image src={image} width={500} height={250} className="card-img-top" alt={`${title} screenshot`} />
         )}
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{title}</h5>

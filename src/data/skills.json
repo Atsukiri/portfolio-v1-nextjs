@@ -1,79 +1,122 @@
 {
-    "Front-end Web Dev": [
-      {
-        "name": "HTML/CSS",
-        "percent": 90,
-        "color": "#e34c26"
-      },
-      {
-        "name": "JavaScript",
-        "percent": 85,
-        "color": "#f0db4f"
-      },
-      {
-        "name": "jQuery",
-        "percent": 80
-      },
-      {
-        "name": "React.js",
-        "percent": 60,
-        "color": "#61dafb"
-      },
-      {
-        "name": "Next.js - Pages router",
-        "percent": 10
-      }
-    ],
-    "Back-end Web Dev": [
-      {
-        "name": "PHP",
-        "percent": 70
-      },
-      {
-        "name": "ASP.NET",
-        "percent": 60
-      },
-      {
-        "name": "CodeIgniter 3",
-        "percent": 30
-      },
-      {
-        "name": "Firebase - Firestore",
-        "percent": 5
-      }
-    ],
-    "Languages": [
-      {
-        "name": "Japanese",
-        "percent": 5,
-        "color": "#f77"
-      }
-    ],
-    "Misc": [
-      {
-        "name": "IT Support",
-        "percent": 60,
-        "color": "#ff9800"
-      },
-      {
-        "name": "Data Analytics",
-        "percent": 5,
-        "color": "#4caf50"
-      },
-      {
-        "name": "Cybersecurity",
-        "percent": 5,
-        "color": "#f44336"
-      },
-      {
-        "name": "Project Management",
-        "percent": 5,
-        "color": "#9c27b0"
-      },
-      {
-        "name": "UX Design",
-        "percent": 5,
-        "color": "#03a9f4"
-      }
-    ]
-  }
+  "Front-end Web Dev": [
+    {
+      "name": "HTML/CSS",
+      "percent": 90,
+      "color": "#e34c26",
+      "experienceLevel": "Proficient",
+      "description": "I use HTML and CSS almost every time I touch a frontend. I am comfortable styling from scratch or tweaking existing layouts."
+    },
+    {
+      "name": "JavaScript",
+      "percent": 85,
+      "color": "#f0db4f",
+      "experienceLevel": "Proficient",
+      "description": "My go-to scripting language for making things interactive, used daily in both work and freelance."
+    },
+    {
+      "name": "jQuery",
+      "percent": 80,
+      "color": "#0769ad",
+      "experienceLevel": "Proficient",
+      "description": "I’ve built and maintained many web apps that use jQuery. It may be old, but I know my way around it well."
+    },
+    {
+      "name": "React.js",
+      "percent": 60,
+      "color": "#61dafb",
+      "experienceLevel": "Intermediate",
+      "description": "Learning React reignited my frontend curiosity. I’m getting more comfortable with hooks and component logic."
+    },
+    {
+      "name": "Next.js (Pages Router)",
+      "percent": 30,
+      "color": "#000000",
+      "experienceLevel": "Learning",
+      "description": "I’m currently using Next.js to build this portfolio. Still new, but enjoying the structure it provides."
+    }
+  ],
+  "Back-end Web Dev": [
+    {
+      "name": "PHP",
+      "percent": 70,
+      "color": "#777bb4",
+      "experienceLevel": "Proficient",
+      "description": "Most of my freelance work is PHP-based. I know how to get things done quickly and reliably."
+    },
+    {
+      "name": "ASP.NET",
+      "percent": 60,
+      "color": "#512bd4",
+      "experienceLevel": "Intermediate",
+      "description": "I've used ASP.NET as backend many times as it is the backend used in my current job."
+    },
+    {
+      "name": "CodeIgniter 3",
+      "percent": 40,
+      "color": "#dd4814",
+      "experienceLevel": "Intermediate",
+      "description": "Recently used CI3 on a freelance project. Trying out"
+    },
+    {
+      "name": "Firebase (Firestore)",
+      "percent": 20,
+      "color": "#ffca28",
+      "experienceLevel": "Learning",
+      "description": "Just starting out with Firestore to store messages and comments for my blog, it's pretty convenient so far."
+    }
+  ],
+  "Supplemental Skills": [
+    {
+      "name": "IT Support",
+      "percent": 85,
+      "color": "#607d8b",
+      "experienceLevel": "Proficient",
+      "description": "My full-time role for 3 years: I troubleshoot systems, assist users, and keep the small things running smoothly."
+    },
+    {
+      "name": "Git",
+      "percent": 50,
+      "color": "#f1502f",
+      "experienceLevel": "Intermediate",
+      "description": "I use Git for most of my projects. I mostly stick to basics but understand branches and merges well enough."
+    },
+    {
+      "name": "Data Analytics",
+      "percent": 25,
+      "color": "#4caf50",
+      "experienceLevel": "Learning",
+      "description": "Took Google’s certification. There are things I learnt here that were helpful to management and document handling."
+    },
+    {
+      "name": "Cybersecurity",
+      "percent": 20,
+      "color": "#f44336",
+      "experienceLevel": "Learning",
+      "description": "I learned the fundamentals through certification. Even though I'm not in a cybersecurity role for now, I use some rules for my IT Support job."
+    },
+    {
+      "name": "Project Management",
+      "percent": 30,
+      "color": "#9c27b0",
+      "experienceLevel": "Learning",
+      "description": "I’ve learned the ropes through certification and team experience: planning, tracking, and communicating clearly."
+    },
+    {
+      "name": "UX Design",
+      "percent": 20,
+      "color": "#03a9f4",
+      "experienceLevel": "Learning",
+      "description": "I enjoy thinking about user experience, even if I’m not a designer. Took Google’s UX course to learn the basics."
+    }
+  ],
+  "Languages": [
+    {
+      "name": "Japanese",
+      "percent": 10,
+      "color": "#f77",
+      "experienceLevel": "Beginner",
+      "description": "I study Japanese as a hobby. Not fluent, but I enjoy reading and slowly improving! Hoping to land a job in Japan too."
+    }
+  ]
+}
