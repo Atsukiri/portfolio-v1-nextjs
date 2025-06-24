@@ -21,13 +21,14 @@ export async function getStaticProps() {
     const projectsData = JSON.parse(fs.readFileSync(projectsFilePath, 'utf-8'));
 
     const formattedDate = new Date().toLocaleString('en-US', {
+        timeZone: 'Asia/Manila',       
         year: 'numeric',
         month: 'long',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
         hour12: true,
-      });
+      }) + " GMT+8";
 
     return {
       props: {
