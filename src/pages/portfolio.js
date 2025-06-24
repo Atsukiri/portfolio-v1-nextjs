@@ -140,7 +140,7 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                                     {cert.title}
                                 </a>
                                 {
-                                    cert.link ? <FaExternalLinkAlt color="#FFFFFF" /> : ""
+                                    cert.link ? <FaExternalLinkAlt className='ms-1' color="#FFFFFF" /> : ""
                                 }
                                 <span>• {cert.issuer}</span>
                                 {cert.description && <span>– {cert.description}</span>}

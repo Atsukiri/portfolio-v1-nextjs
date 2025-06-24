@@ -15,7 +15,7 @@ export default function HomePage() {
           <div className={styles.columnText}>
             <h1>Looking to hire?</h1>
             <p>View my professional work experience, skills, and projects.</p>
-            <Link href="/professional" className="btn btn-outline-light mt-3">
+            <Link href="/portfolio" className="btn btn-outline-light mt-3">
               Professional Portfolio
             </Link>
           </div>
