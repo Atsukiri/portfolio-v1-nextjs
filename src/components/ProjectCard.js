@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProjectCard({ title, description, image, liveUrl, repoUrl, tags = [] }) {
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="card h-100 shadow-sm">
         {image && (
-          <img src={image} className="card-img-top" alt={`${title} screenshot`} />
+          <Image src={image} className="card-img-top" alt={`${title} screenshot`} />
         )}
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{title}</h5>
