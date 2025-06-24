@@ -1,16 +1,51 @@
 import SkillWheel from '../components/SkillWheel';
-import certificationsData from '../data/certifications.json';
-import skillsData from '../data/skills.json';
+// import certificationsData from '../data/certifications.json';
+// import skillsData from '../data/skills.json';
+// import projectsData from '../data/projects.json';
 import Link from 'next/link';
 import Layout from '../components/ProLayout'
-import projectsData from '../data/projects.json';
 import ProjectCard from '../components/ProjectCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FiMail,FiGithub, FiDownload, FiLinkedin } from 'react-icons/fi';
+import fs from 'fs';
+import path from 'path';
+import Head from 'next/head';
 
-export default function ProfessionalPage() {
+export async function getStaticProps() {
+    const skillsFilePath = path.join(process.cwd(), 'src', 'data', 'skills.json');
+    const certificationsFilePath = path.join(process.cwd(), 'src', 'data', 'certifications.json');
+    const projectsFilePath = path.join(process.cwd(), 'src', 'data', 'projects.json');
+    
+    const skillsData = JSON.parse(fs.readFileSync(skillsFilePath, 'utf-8'));
+    const certificationsData = JSON.parse(fs.readFileSync(certificationsFilePath, 'utf-8'));
+    const projectsData = JSON.parse(fs.readFileSync(projectsFilePath, 'utf-8'));
+
+    const formattedDate = new Date().toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      });
+
+    return {
+      props: {
+        skillsData,
+        certificationsData,
+        projectsData,
+        formattedDate
+      }
+    };
+  }
+
+  
+export default function ProfessionalPage({skillsData, certificationsData, projectsData, formattedDate }) {
   return (
     <Layout>
+        <Head>
+            <title>Milan Avorque - Professional Portfolio</title>
+        </Head>
         <main className="container py-5">
             <header className="text-center mb-5">
                 <h1 className="display-4 nameHeader">Milan Avorque</h1>
@@ -124,7 +159,7 @@ export default function ProfessionalPage() {
                 </div>
                 <hr className='my-2' />
                 <p className="text-gold" style={{ fontSize: '0.875rem' }}>
-                    © <a href="/">Milan Avorque</a>  - 2025 | Last updated: June 24, 2025 9:06:52 PM 
+                    © <Link href="/">Milan Avorque</Link>  - 2025 | Last updated: { formattedDate } 
                 </p>
             </footer>
         </main>

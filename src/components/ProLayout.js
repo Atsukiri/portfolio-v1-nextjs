@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import '../styles/professional.css';
+import styles from '../styles/Pro.module.css';
 
 export default function Layout({ children }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <meta property="og:image" content="https://yourdomain.com/og-professional.png" /> */}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </>
   )
 }
