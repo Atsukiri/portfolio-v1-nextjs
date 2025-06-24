@@ -1,0 +1,59 @@
+{
+  "Data Analytics": [
+    {
+      "title": "Google Data Analytics Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/ICB0TAJFDXJ6"
+    },
+    {
+      "title": "Google Advanced Data Analytics Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/DIBHS5Y9RRKO"
+    }
+  ],
+  "Cybersecurity": [
+    {
+      "title": "Google Cybersecurity Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/6KIOE2J8902F"
+    }
+  ],
+  "IT Support and SysAdmin": [
+    {
+      "title": "Google IT Support Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/YL5D3VJBKJKJ"
+    },
+    {
+      "title": "Google IT Automation with Python Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/PUJ56EIU4R1X"
+    }
+  ],
+  "Project Management": [
+    {
+      "title": "Google Project Management Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/ZTZJB3C0URV7"
+    }
+  ],
+  "UX Design": [
+    {
+      "title": "Google UX Design Specialization",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/ZKQCATPWU0PP"
+    }
+  ],
+  "Others": [
+    {
+      "title": "CSC Professional",
+      "issuer": "Civil Service Commission",
+      "description": "Rating: 83.22% | Exam Date: October 18, 2015"
+    },    
+    {
+      "title": "Google AI Essentials",
+      "issuer": "Google",
+      "link": "https://www.coursera.org/account/accomplishments/records/8RFXCYLZPXHY"
+    }
+  ]
+}

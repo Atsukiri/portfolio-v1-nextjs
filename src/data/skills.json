@@ -1,0 +1,79 @@
+{
+    "Front-end Web Dev": [
+      {
+        "name": "HTML/CSS",
+        "percent": 90,
+        "color": "#e34c26"
+      },
+      {
+        "name": "JavaScript",
+        "percent": 85,
+        "color": "#f0db4f"
+      },
+      {
+        "name": "jQuery",
+        "percent": 80
+      },
+      {
+        "name": "React.js",
+        "percent": 60,
+        "color": "#61dafb"
+      },
+      {
+        "name": "Next.js - Pages router",
+        "percent": 10
+      }
+    ],
+    "Back-end Web Dev": [
+      {
+        "name": "PHP",
+        "percent": 70
+      },
+      {
+        "name": "ASP.NET",
+        "percent": 60
+      },
+      {
+        "name": "CodeIgniter 3",
+        "percent": 30
+      },
+      {
+        "name": "Firebase - Firestore",
+        "percent": 5
+      }
+    ],
+    "Languages": [
+      {
+        "name": "Japanese",
+        "percent": 5,
+        "color": "#f77"
+      }
+    ],
+    "Misc": [
+      {
+        "name": "IT Support",
+        "percent": 60,
+        "color": "#ff9800"
+      },
+      {
+        "name": "Data Analytics",
+        "percent": 5,
+        "color": "#4caf50"
+      },
+      {
+        "name": "Cybersecurity",
+        "percent": 5,
+        "color": "#f44336"
+      },
+      {
+        "name": "Project Management",
+        "percent": 5,
+        "color": "#9c27b0"
+      },
+      {
+        "name": "UX Design",
+        "percent": 5,
+        "color": "#03a9f4"
+      }
+    ]
+  }

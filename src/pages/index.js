@@ -20,7 +20,7 @@ export default function HomePage() {
       <div className={`${styles.splitColumn} ${styles.personal} bg-info text-dark`}>
         <h3 className={styles.artist}>@Atsukiri</h3>
         <div className={styles.columnText}>
-          <h1>Here's the not-so-serious side.</h1>
+          <h1>Here&apos;s the not-so-serious side.</h1>
           <p className='m-0'>Explore my art, hobbies, and what I do for fun. A mix of things I do just because I enjoy them.</p>
           <p>Where I explore, learn, and occasionally post progress.</p>
           <Link href="/personal" className="btn btn-dark mt-3">

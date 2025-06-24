@@ -1,0 +1,18 @@
+[
+  {
+    "title": "CGPP E-Apply",
+    "description": "Online job application portal for LGU City Government of Puerto Princesa. I only made the admin side / HR side as a collaboration project with a workmate",
+    "image": "/projects/e-apply2.png",
+    "liveUrl": "http://cgpp.puertoprincesa.ph/e-apply/hr",
+    "tags": ["React.js", "Bootstrap", "ASP.NET"]
+  },
+  {
+    "title": "CGPP LTS",
+    "description": "The Legislative Tracking System for Puerto Princesa City Government currently archives finished legislation. Future updates will include creation, approval, and real-time tracking of legislative processes.",
+    "image": "/projects/lts.png",
+    "liveUrl": "http://cgpp.puertoprincesa.ph/CGPP-LTS",
+    "tags": ["React.js", "Bootstrap", "ASP.NET"]
+  }
+]
+  
+      // "repoUrl": "https://github.com/yourusername/portfolio",
