@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Personal Portfolio – Coming Soon</title>
+        <title>Milan Avorque - Portfolio</title>
       </Head>
       <div className={styles.splitSection}>
         {/* Professional side */}
