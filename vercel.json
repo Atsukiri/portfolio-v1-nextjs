@@ -6,6 +6,7 @@
         "destination": "/_vercel/insights/:match*"
       },
       { "source": "/analytics/:match*", "destination": "/_vercel/insights/:match*" },
-      { "source": "/wowza", "destination": "/portfolio" }
+      { "source": "/wowza", "destination": "/portfolio" },
+      { "source": "/hood", "destination": "/_vercel/insights/script.js" }
     ]
   }
