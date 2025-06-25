@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/analy/:match*",
+        "destination": "/_vercel/insights/:match*"
+      }
+    ]
+  }
