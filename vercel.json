@@ -3,10 +3,7 @@
     "rewrites": [
       {
         "source": "/analy/:match*",
-        "destination": "/_vercel/insights/:match*"
-      },
-      { "source": "/analytics/:match*", "destination": "/_vercel/insights/:match*" },
-      { "source": "/wowza", "destination": "/portfolio" },
-      { "source": "/hood", "destination": "/_vercel/insights/script.js" }
+        "destination": "https://atsukiri.vercel.app/_vercel/insights/:match*"
+      }
     ]
   }
