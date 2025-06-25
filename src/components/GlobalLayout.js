@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Analytics } from "@vercel/analytics/next";
+import Script from 'next/script';
 
 export default function GlobalLayout({ children }) {
   return (
@@ -16,7 +17,15 @@ export default function GlobalLayout({ children }) {
         </Head>
       <body>
         {children}
-        <Analytics/>
+        <Script id="va-init" strategy="afterInteractive">
+          {`window.va = window.va || function(){(window.vaq = window.vaq || []).push(arguments);};`}
+        </Script>
+        <Script
+          src="/analy/script.js"
+          data-endpoint="/analy"
+          async
+          strategy="lazyOnload"
+        />
       </body>
     </>
   )
