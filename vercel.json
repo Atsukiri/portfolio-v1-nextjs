@@ -6,4 +6,4 @@
         "destination": "https://atsukiri.vercel.app/_vercel/insights/:match*"
       }
     ]
-  }
+}
