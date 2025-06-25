@@ -9,6 +9,6 @@ export default function Layout({ children }) {
         <title>Milan Avorque – Web Developer & IT Support</title>
       </Head>
       <main className={styles.main}>{children}</main>
-      </GlobalLayout>
+    </GlobalLayout>
   )
 }

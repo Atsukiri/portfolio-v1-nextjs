@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 export default function GlobalLayout({ children }) {
   return (
     <>
-      <Analytics/>
       <Head>
           <title>Milan Avorque – Personal Website</title>
           <meta name="description" content="Professional portfolio of Milan Avorque: web development, IT support, data analytics, cybersecurity, UX design, and more." />
@@ -15,7 +14,10 @@ export default function GlobalLayout({ children }) {
           <meta property="og:image" content="https://yourdomain.com/og-professional.png" /> */}
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-      <main>{children}</main>
+      <body>
+        {children}
+        <Analytics/>
+      </body>
     </>
   )
 }

@@ -22,7 +22,7 @@
   font-size: 2rem;
   position: absolute;
   top:15px;
-  left:15;
+  left:15px;
 }
 
 .artist{
@@ -32,7 +32,7 @@
   text-shadow: 3px 3px 1px #333;
   position: absolute;
   bottom:15px;
-  right:15;
+  right:15px;
 }
 
 .splitColumn > h2, .splitColumn > h3{
