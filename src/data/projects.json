@@ -26,6 +26,6 @@
     "description": "For Palawena Travel and Tours, I collaborated with a team to develop the admin dashboard and integrated essential APIs for booking data and PayPal payments",
     "image": "/projects/palawena.png",
     "liveUrl": "http://palawenatravelandtours.com",
-    "tags": ["CodeIgniter 3", "Bootstrap", "Paypal API"]
+    "tags": ["CodeIgniter 3", "jQuery", "Bootstrap", "PayPal API"]
   }
 ]
