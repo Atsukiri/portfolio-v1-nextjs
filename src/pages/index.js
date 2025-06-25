@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
+import GlobalLayout from '../components/GlobalLayout';
 
 export default function HomePage() {
   return (
-    <>
+    <GlobalLayout>
       <Head>
         <title>Milan Avorque - Portfolio</title>
       </Head>
@@ -34,6 +35,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </>
+    </GlobalLayout>
   );
 }

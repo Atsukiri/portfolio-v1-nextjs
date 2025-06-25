@@ -9,7 +9,6 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FiMail,FiGithub, FiDownload, FiLinkedin, FiX, FiFacebook } from 'react-icons/fi';
 import fs from 'fs';
 import path from 'path';
-import Head from 'next/head';
 
 export async function getStaticProps() {
     const skillsFilePath = path.join(process.cwd(), 'src', 'data', 'skills.json');
@@ -44,9 +43,6 @@ export async function getStaticProps() {
 export default function ProfessionalPage({skillsData, certificationsData, projectsData, formattedDate }) {
   return (
     <Layout>
-        <Head>
-            <title>Milan Avorque - Professional Portfolio</title>
-        </Head>
         <main className="container py-5">
             <header className="text-center mb-5">
                 <h1 className="display-4 nameHeader">Milan Avorque</h1>
