@@ -53,15 +53,23 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                 <p className="lead">Web Developer • IT Support</p>
             </header>
             <section id="intro" className='mb-5'>
-                <h5 className='text-center'>
-                    Hi! I’m Milan Avorque — a web developer and IT support specialist with a background in both frontend and backend technologies.
-                    I spent a year doing full-time PHP and jQuery development before transitioning into IT support, where I’ve been solving tech issues for the past three years. 
-                    I still take on occasional freelance dev work, mostly with PHP and CodeIgniter. Currently learning Next.js, exploring better UX, and always open to part-time, remote opportunities.
-                </h5>
-                <p className='text-center'>
-                    For now, I’m currently looking for <strong>home-based</strong> or <strong>part-time</strong> roles due to personal limitations,
-                    while I continue my current position to manage financial commitments.
-                </p>
+                <div className='text-center'>
+                    <p>
+                        Hey there! I&apos;m Milan Avorque. I bring a unique blend of skills as a <b>web developer</b> and 
+                        <b> IT support specialist</b>. After a year of full-time <b>PHP/jQuery</b> development, and another year of
+                        full-stack <b>ASP.NET MVC</b> development,
+                        I spent three years sharpening my problem-solving abilities in IT support, and getting various
+                        certifications to support
+                        My passion for development continues through freelance work and learning <b>Next.js</b>.
+                    </p>
+                    <p>
+                        I&apos;ve earned multiple Google Specializations in <strong>Data Analytics, UX Design, and Project Management</strong> to broaden my expertise and find areas I truly enjoy. This diverse learning journey continually enhances my <strong>programming and IT support problem-solving</strong> skills, proving especially invaluable for <strong>understanding client needs and independently managing projects</strong> in my day job, where I often handle requests solo due to limited team size. While I also contribute to side projects as part of a team, these certifications help me excel across all my work.
+                    </p>
+                    <p>
+                        I&apos;m currently looking for <b>home-based</b> or <b>part-time roles</b> where I can contribute my versatile tech background.
+                    </p>
+                </div>
+                <hr />
                 <div className="d-flex justify-content-center align-items-center gap-3">
                     <a href="mailto:milan.avorque@gmail.com" className="footer-link">
                         <FiMail size={20} /> Email
@@ -113,9 +121,9 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                             <hr className='my-2' />
                             <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
                                 {arr.map(skill => <div className='mb-2' key={skill.name}>
-                                    <div className='d-flex align-items-center'>
+                                    <div className='d-flex align-items-center justify-content-center justify-content-md-start'>
+                                        <h5 className='me-2 m-0 d-inline fw-bold'>{skill.name}</h5>
                                         <span style={{fontSize:10}} className={'badge bg-'+(skill.experienceLevel == "Proficient" ? "warning text-dark" : (skill.experienceLevel == "Intermediate" ? "primary" : "success"))+' d-inline badge-pill'}>{skill.experienceLevel}</span>
-                                        <h5 className='ms-1 m-0 d-inline fw-bold'>{skill.name}</h5>
                                     </div>
                                     <div>{skill.description}</div>
                                 </div>)} 
@@ -170,7 +178,7 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
                 <hr />
                 <div className="row">
                     {projectsData.map((project) => (
-                    <ProjectCard key={project.title} {...project} />
+                        <ProjectCard key={project.title} {...project} />
                     ))}
                 </div>
             </section>

@@ -19,13 +19,13 @@
         color:white;
     }
 
-    a{
+    a:not(:global(.btn)){
         font-family: 'Inter', sans-serif;
         text-decoration: none;
         color: #f8ffb4;
     }
 
-    a:hover{
+    a:not(:global(.btn)):hover{
         text-decoration: underline;
         color: #FFCC00; 
     }

@@ -49,21 +49,21 @@
       "percent": 60,
       "color": "#512bd4",
       "experienceLevel": "Intermediate",
-      "description": "I've used ASP.NET as backend many times as it is the backend used in my current job."
+      "description": "I've used ASP.NET as backend many times as it is the backend / fullstack used in my current job."
     },
     {
       "name": "CodeIgniter 3",
       "percent": 40,
       "color": "#dd4814",
       "experienceLevel": "Intermediate",
-      "description": "Recently used CI3 on a freelance project. Trying out"
+      "description": "Recently used CI3 on a freelance project. It's for trying out if dev will be faster, frontend used is also CI3."
     },
     {
       "name": "Firebase (Firestore)",
       "percent": 20,
       "color": "#ffca28",
       "experienceLevel": "Learning",
-      "description": "Just starting out with Firestore to store messages and comments for my blog, it's pretty convenient so far."
+      "description": "Just starting out with Firestore to store messages and comments for my *upcoming blog, it's pretty convenient so far."
     }
   ],
   "Supplemental Skills": [

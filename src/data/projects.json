@@ -1,7 +1,15 @@
 [
   {
+    "title": "Personal Website",
+    "description": "This project is my personal website, serving as the hub for my portfolio. It also features a blog and showcases various personal interests, with occasional updates on my progress.",
+    "image": "/projects/personal-site.png",
+    "liveUrl": "http://atsukiri.vercel.app",
+    "tags": ["Next.js", "Bootstrap", "Firestore"],
+    "repoUrl": "https://github.com/Atsukiri/portfolio-v1-nextjs"
+  },
+  {
     "title": "CGPP E-Apply",
-    "description": "Online job application portal for LGU City Government of Puerto Princesa. I only made the admin side / HR side as a collaboration project with a workmate",
+    "description": "I developed the HR / administrative sections for the LGU City Government of Puerto Princesa's online job application portal, collaborated with a workmate who made the public view. This project significantly streamlined their recruitment process, directly enhancing operational efficiency for the local government.",
     "image": "/projects/e-apply2.png",
     "liveUrl": "http://cgpp.puertoprincesa.ph/e-apply/hr",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
@@ -12,5 +20,12 @@
     "image": "/projects/lts.png",
     "liveUrl": "http://cgpp.puertoprincesa.ph/CGPP-LTS",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
+  },
+  {
+    "title": "Palawena Travel and Tours | Admin Dashboard",
+    "description": "For Palawena Travel and Tours, I collaborated with a team to develop the admin dashboard and integrated essential APIs for booking data and PayPal payments",
+    "image": "/projects/palawena.png",
+    "liveUrl": "http://palawenatravelandtours.com",
+    "tags": ["CodeIgniter 3", "Bootstrap", "Paypal API"]
   }
 ]
