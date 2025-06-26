@@ -6,9 +6,6 @@ import GlobalLayout from '../components/GlobalLayout';
 export default function HomePage() {
   return (
     <GlobalLayout>
-      <Head>
-        <title>Milan Avorque - Portfolio</title>
-      </Head>
       <div className={styles.splitSection}>
         {/* Professional side */}
         <div className={`${styles.splitColumn} ${styles.pro} bg-dark text-white`}>

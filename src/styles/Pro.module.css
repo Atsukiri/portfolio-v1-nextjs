@@ -56,4 +56,34 @@
         color: #D2D2D2;
         font-size: 0.9rem;
     }
+      
 }
+
+/* ProjectCard.module.css */
+.cardTitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-bottom: 0.25rem;
+    font-weight: bold;
+    color: #0098be;
+    text-shadow: 1px 1px 1px #777;
+  }
+  
+  .cardTitle::after {
+    /* underline hover effect */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #61dafb;
+    transition: width 0.3s;
+  }
+  
+  .cardTitle:hover::after {
+    width: 100%;
+  }
+  

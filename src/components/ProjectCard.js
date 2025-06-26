@@ -1,4 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
+import styles from '../styles/Pro.module.css';
 
 export default function ProjectCard({ title, description, image, repoUrl, liveUrl, tags }) {
 
@@ -28,8 +30,12 @@ export default function ProjectCard({ title, description, image, repoUrl, liveUr
           />
         )}
         <div className="card-body d-flex flex-column">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text flex-grow-1">{description}</p>
+          <h4 className={styles.cardTitle + " card-title"} >{title}</h4>
+          <ReactMarkdown 
+            components={{
+            // Target the 'p' (paragraph) HTML element that ReactMarkdown would render
+            p: ({ node, ...props }) => <p className="card-text flex-grow-1" {...props} />
+        }}>{description}</ReactMarkdown>
           {tags.length > 0 && (
           <div className="mt-2">
             {tags.map((tag) => (

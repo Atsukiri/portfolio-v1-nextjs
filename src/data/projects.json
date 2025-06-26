@@ -1,7 +1,7 @@
 [
   {
     "title": "Personal Website",
-    "description": "This project is my personal website, serving as the hub for my portfolio. It also features a blog and showcases various personal interests, with occasional updates on my progress.",
+    "description": "This is my **personal website and portfolio hub**, featuring a blog and showcasing various personal interests with occasional progress updates.",
     "image": "/projects/personal-site.png",
     "liveUrl": "http://atsukiri.vercel.app",
     "tags": ["Next.js", "Bootstrap", "Firestore"],
@@ -9,21 +9,27 @@
   },
   {
     "title": "CGPP E-Apply",
-    "description": "I developed the HR / administrative sections for the LGU City Government of Puerto Princesa's online job application portal, collaborated with a workmate who made the public view. This project significantly streamlined their recruitment process, directly enhancing operational efficiency for the local government.",
+    "description": "I developed the **HR/administrative sections** of the LGU City Government of Puerto Princesa's online job portal. Collaborating on this project, which included a public-facing view built by a colleague, significantly **streamlined the recruitment process** and directly enhanced the local government's operational efficiency.",
     "image": "/projects/e-apply2.png",
     "liveUrl": "http://cgpp.puertoprincesa.ph/e-apply/hr",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
   },
   {
     "title": "CGPP LTS",
-    "description": "The Legislative Tracking System for Puerto Princesa City Government currently archives finished legislation. Future updates will include creation, approval, and real-time tracking of legislative processes.",
+    "description": "This **Legislative Tracking System** archives finished legislation for Puerto Princesa City Government. *Future updates* will add creation, approval, and *real-time tracking* of legislative processes, enhancing efficiency and transparency.",
     "image": "/projects/lts.png",
     "liveUrl": "http://cgpp.puertoprincesa.ph/CGPP-LTS",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
   },
   {
+    "title": "CGPP Centralized Data System",
+    "description": "The *Centralized Data System* centralizes and manages shared data (offices, divisions, users) for all LGU Puerto Princesa web systems. It offers **APIs for data retrieval and unified login**, while its **dashboard** allows administrators to manage systems, user roles, and permissions, streamlining data governance and access across the city government's digital ecosystem.",
+    "image": "/projects/cds.png",
+    "tags": ["ASP.NET", "Bootstrap", "jQuery"]
+  },
+  {
     "title": "Palawena Travel and Tours | Admin Dashboard",
-    "description": "For Palawena Travel and Tours, I collaborated with a team to develop the admin dashboard and integrated essential APIs for booking data and PayPal payments",
+    "description": "For Palawena Travel and Tours, I **collaborated with a team** and I was assigned the **admin dashboard** section, integrating essential APIs for booking data and PayPal payments to streamline operations.",
     "image": "/projects/palawena.png",
     "liveUrl": "http://palawenatravelandtours.com",
     "tags": ["CodeIgniter 3", "jQuery", "Bootstrap", "PayPal API"]

@@ -170,7 +170,7 @@ export default function ProfessionalPage({skillsData, certificationsData, projec
             </section>
             
             <section id="projects" className="mb-5">
-                <h1>Projects</h1>
+                <h1>What I’ve Built</h1>
                 <hr />
                 <div className="row">
                     {projectsData.map((project) => (
