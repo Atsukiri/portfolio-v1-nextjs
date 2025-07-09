@@ -2,7 +2,7 @@
   {
     "title": "Personal Website",
     "description": "This is my **personal website and portfolio hub**, featuring a blog and showcasing various personal interests with occasional progress updates.",
-    "image": "/projects/personal-site.png",
+    "image": "/projects/personal-site.webp",
     "liveUrl": "http://atsukiri.vercel.app",
     "tags": ["Next.js", "Bootstrap", "Firestore"],
     "repoUrl": "https://github.com/Atsukiri/portfolio-v1-nextjs"
@@ -10,27 +10,27 @@
   {
     "title": "CGPP E-Apply",
     "description": "I developed the **HR/administrative sections** of the LGU City Government of Puerto Princesa's online job portal. Collaborating on this project, which included a public-facing view built by a colleague, significantly **streamlined the recruitment process** and directly enhanced the local government's operational efficiency.",
-    "image": "/projects/e-apply2.png",
+    "image": "/projects/e-apply2.webp",
     "liveUrl": "http://cgpp.puertoprincesa.ph/e-apply/hr",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
   },
   {
     "title": "CGPP LTS",
     "description": "This **Legislative Tracking System** archives finished legislation for Puerto Princesa City Government. *Future updates* will add creation, approval, and *real-time tracking* of legislative processes, enhancing efficiency and transparency.",
-    "image": "/projects/lts.png",
+    "image": "/projects/lts.webp",
     "liveUrl": "http://cgpp.puertoprincesa.ph/CGPP-LTS",
     "tags": ["React.js", "Bootstrap", "ASP.NET"]
   },
   {
     "title": "CGPP Centralized Data System",
     "description": "The *Centralized Data System* centralizes and manages shared data (offices, divisions, users) for all LGU Puerto Princesa web systems. It offers **APIs for data retrieval and unified login**, while its **dashboard** allows administrators to manage systems, user roles, and permissions, streamlining data governance and access across the city government's digital ecosystem.",
-    "image": "/projects/cds.png",
+    "image": "/projects/cds.webp",
     "tags": ["ASP.NET", "Bootstrap", "jQuery"]
   },
   {
     "title": "Palawena Travel and Tours | Admin Dashboard",
     "description": "For Palawena Travel and Tours, I **collaborated with a team** and I was assigned the **admin dashboard** section, integrating essential APIs for booking data and PayPal payments to streamline operations.",
-    "image": "/projects/palawena.png",
+    "image": "/projects/palawena.webp",
     "liveUrl": "http://palawenatravelandtours.com",
     "tags": ["CodeIgniter 3", "jQuery", "Bootstrap", "PayPal API"]
   }

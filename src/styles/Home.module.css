@@ -85,7 +85,7 @@
 }
 
 .personal:hover {
-  background-image: linear-gradient(#ffffff18, #000000e5),  url("/home/personal.png");
+  background-image: linear-gradient(#ffffff18, #000000e5),  url("/home/personal.webp");
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;

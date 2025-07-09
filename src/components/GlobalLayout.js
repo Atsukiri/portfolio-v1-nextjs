@@ -16,11 +16,11 @@ export default function GlobalLayout({ title, description, children }) {
           <meta property="og:title" content={fullTitle} />
           <meta property="og:description" content={description ?? defaultDescription} />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://atsukiri.vercel.app/og_image.png" />
+          <meta property="og:image" content="https://atsukiri.vercel.app/og_image.webp" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content="https://atsukiri.vercel.app/og_image.png" />
+          <meta name="twitter:image" content="https://atsukiri.vercel.app/og_image.webp" />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
@@ -35,6 +35,22 @@ export default function GlobalLayout({ title, description, children }) {
             async
             strategy="lazyOnload"
           />
+          <script type="application/ld+json">
+          {
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Milan Avorque",
+              "jobTitle": "Web Developer & IT Support Specialist",
+              "url": "https://atsukiri.vercel.app",
+              "sameAs": [
+                "https://github.com/atsukiri",
+                "https://linkedin.com/in/milan-avorque-82a860320"
+              ]
+            }
+          }
+          </script>
+
         </body>
     </>
   )
