@@ -8,6 +8,18 @@ export default function GlobalLayout({ title, description, children }) {
   const fullTitle = title ? `${title} | Milan A.` : defaultTitle;
   const defaultDescription = 'Remote Web Developer & IT Support Specialist, skilled in React.js, Next.js, PHP, and freelance web development. Showcasing skills, certifications, and contact info.';
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Milan Avorque",
+      "jobTitle": "Web Developer & IT Support Specialist",
+      "url": "https://atsukiri.vercel.app",
+      "sameAs": [
+        "https://github.com/atsukiri",
+        "https://linkedin.com/in/milan-avorque-82a860320"
+      ]
+  };
+
   return (
     <>
       <Head>
@@ -22,6 +34,14 @@ export default function GlobalLayout({ title, description, children }) {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content="https://atsukiri.vercel.app/og_image.webp" />
           <meta name="twitter:card" content="summary_large_image" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+            }}
+          />
+          {/* ... */}
+
         </Head>
 
         <body>
@@ -35,22 +55,7 @@ export default function GlobalLayout({ title, description, children }) {
             async
             strategy="lazyOnload"
           />
-          <script type="application/ld+json">
-          {
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Milan Avorque",
-              "jobTitle": "Web Developer & IT Support Specialist",
-              "url": "https://atsukiri.vercel.app",
-              "sameAs": [
-                "https://github.com/atsukiri",
-                "https://linkedin.com/in/milan-avorque-82a860320"
-              ]
-            }
-          }
-          </script>
-
+          
         </body>
     </>
   )

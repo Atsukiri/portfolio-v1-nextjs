@@ -76,7 +76,7 @@
 }
 
 .pro:hover {
-  background-image: linear-gradient(#000000a3, #000415cc), url("/home/professional.jpg");
+  background-image: linear-gradient(#000000a3, #000415cc), url("/home/professional.webp");
   
   .columnText{
     background: rgba(0,0,0,0.2);
