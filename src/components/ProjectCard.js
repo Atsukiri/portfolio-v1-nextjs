@@ -1,12 +1,11 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
-import styles from '../styles/Pro.module.css';
 
 export default function ProjectCard({ title, description, image, repoUrl, liveUrl, tags }) {
 
   const tagColors = {
-    "React.js": "#61DBFB",          // React cyan :contentReference[oaicite:2]{index=2}
-    "Next.js": "#000000",
+    "React.js": "#61DBFB",
+    "Next.js": "#ffffff",
     "PHP": "#777bb4",
     "ASP.NET": "#512bd4",
     "CodeIgniter 3": "#dd4814",
@@ -15,59 +14,76 @@ export default function ProjectCard({ title, description, image, repoUrl, liveUr
     "Bootstrap": "#7952b3",
     "jQuery": "#0769ad",
     "PayPal API": "#09368E",
-    // Add more as needed...
   };
   
   return (
     <div className='col-md-4 mb-4'>
-      <div className="card h-100 shadow-sm">
+      <div className="glass-card h-100 d-flex flex-column overflow-hidden">
         {image && (
-          <img
-            src={image}
-            alt={title}
-            className="card-img-top"
-            style={{ objectFit: 'cover', height: '200px' }}
-          />
-        )}
-        <div className="card-body d-flex flex-column">
-          <h4 className={styles.cardTitle + " card-title"} >{title}</h4>
-          <ReactMarkdown 
-            components={{
-            // Target the 'p' (paragraph) HTML element that ReactMarkdown would render
-            p: ({ node, ...props }) => <p className="card-text flex-grow-1" {...props} />
-        }}>{description}</ReactMarkdown>
-          {tags.length > 0 && (
-          <div className="mt-2">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="badge rounded-pill text-light me-1"
-                style={{ textShadow: "1px 1px 5px black", backgroundColor: tagColors[tag] || '#6c757d' }}
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="position-relative overflow-hidden" style={{ height: '200px' }}>
+            <img
+              src={image}
+              alt={title}
+              className="w-100 h-100"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         )}
-          <div className="mt-3 d-flex gap-2">
+        <div className="p-4 d-flex flex-column flex-grow-1">
+          <h4 className="font-heading mb-3" style={{ color: 'var(--primary)' }}>{title}</h4>
+          <div className="flex-grow-1 text-secondary mb-4">
+            <ReactMarkdown 
+              components={{
+                p: ({ node, ...props }) => <p className="mb-0" style={{ fontSize: '0.925rem', lineHeight: '1.6' }} {...props} />
+              }}
+            >
+              {description}
+            </ReactMarkdown>
+          </div>
+          
+          {tags.length > 0 && (
+            <div className="d-flex flex-wrap gap-2 mb-4">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2 py-1 rounded-sm"
+                  style={{ 
+                    fontSize: '0.7rem', 
+                    fontWeight: '700',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    backgroundColor: `${tagColors[tag] || '#6c757d'}20`,
+                    color: tagColors[tag] || '#6c757d',
+                    border: `1px solid ${tagColors[tag] || '#6c757d'}40`
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="d-flex gap-3 mt-auto">
             {repoUrl && (
               <a
                 href={repoUrl}
-                className="btn btn-outline-dark btn-sm"
+                className="text-white hover:text-primary transition-colors d-flex align-items-center gap-2"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ fontSize: '0.875rem' }}
               >
-                <FaGithub className="me-1" /> GitHub
+                <FaGithub /> Code
               </a>
             )}
             {liveUrl && (
               <a
                 href={liveUrl}
-                className="btn btn-primary btn-sm"
+                className="text-white hover:text-primary transition-colors d-flex align-items-center gap-2"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ fontSize: '0.875rem' }}
               >
-                <FaExternalLinkAlt className="me-1" /> Live Demo
+                <FaExternalLinkAlt /> Live Demo
               </a>
             )}
           </div>

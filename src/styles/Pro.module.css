@@ -1,89 +1,131 @@
-
-
-.main{
-    background: #006666;
-    color: white;
-
-    section + section{
-        margin-top: 3rem;
-    }
-    .nameHeader {
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    section > h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    }
-    
-    .CircularProgressbar-text{
-        color:white;
-    }
-
-    a:not(:global(.btn)){
-        font-family: 'Inter', sans-serif;
-        text-decoration: none;
-        color: #f8ffb4;
-    }
-
-    a:not(:global(.btn)):hover{
-        text-decoration: underline;
-        color: #FFCC00; 
-    }
-
-    .card {
-        background-color: #Fff;    /* white for clarity */
-        color: #006666;               /* matches the theme */
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .cert-item {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .cert-item a {
-        flex-shrink: 0; /* Keeps link inline with icon */
-    }
-    
-    .cert-item span {
-        color: #D2D2D2;
-        font-size: 0.9rem;
-    }
-      
+.main {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
 }
 
-/* ProjectCard.module.css */
-.cardTitle {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    position: relative;
-    padding-bottom: 0.25rem;
-    font-weight: bold;
-    color: #0098be;
-    text-shadow: 1px 1px 1px #777;
+.nameHeader {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionHeader {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.introSection {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.introSection b, .introSection strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary) !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footerLink:hover {
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.skillCategory {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skillCategory h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.skillBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skillBadge.proficient { border-color: var(--primary); box-shadow: 0 0 10px var(--primary-glow); }
+.skillBadge.intermediate { border-color: var(--secondary); box-shadow: 0 0 10px var(--secondary-glow); }
+
+.certItem {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.certItem a {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none !important;
+}
+
+.certItem a:hover {
+  color: var(--primary) !important;
+}
+
+.certItem span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.footer {
+  border-top: 1px solid var(--surface-border);
+  padding: 3rem 0;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .nameHeader {
+    font-size: 3rem;
   }
-  
-  .cardTitle::after {
-    /* underline hover effect */
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #61dafb;
-    transition: width 0.3s;
+  .socialLinks {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  
-  .cardTitle:hover::after {
-    width: 100%;
-  }
-  
+}

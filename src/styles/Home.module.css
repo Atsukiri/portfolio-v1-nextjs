@@ -1,111 +1,104 @@
 .splitSection {
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  overflow: hidden;
+  background-color: var(--bg-dark);
 }
 
 .splitColumn {
-  transition: all 0.3s ease;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
   text-align: center;
-  width: 50%;
-  overflow: hidden; /* prevent scrollbars */
-  backdrop-filter: blur(50px);
+  overflow: hidden;
 }
-.real{
-  font-family: 'Manrope', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
+
+.columnContent {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  width: 100%;
+}
+
+.label {
   position: absolute;
-  top:15px;
-  left:15px;
+  top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
 }
 
-.artist{
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
-  color: #70faff;
-  text-shadow: 3px 3px 1px #333;
-  position: absolute;
-  bottom:15px;
-  right:15px;
+.pro .label { left: 2rem; }
+.personal .label { right: 2rem; }
+
+.textGroup h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 
-.splitColumn > h2, .splitColumn > h3{
-  display: none;
+.textGroup p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
-.splitColumn:hover > h2,.splitColumn:hover > h3 {
-  display: block;
+.pro {
+  background: linear-gradient(to bottom, rgba(3, 7, 18, 0.8), rgba(3, 7, 18, 0.95)),
+              url("/home/professional.webp");
+  background-size: cover;
+  background-position: center;
+  border-right: 1px solid var(--surface-border);
 }
 
-.splitColumn:hover {
-  width: 80%;
+.personal {
+  background: linear-gradient(to bottom, rgba(3, 7, 18, 0.8), rgba(3, 7, 18, 0.95)),
+              url("/home/personal.webp");
+  background-size: cover;
+  background-position: center;
 }
 
-.columnText{
-  padding: 25px 30px;
+.modernButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.splitColumn:nth-child(1) {
-  .columnText > h1{
-    font-family: 'Manrope';
-  }
-  .columnText > p {
-    font-family: 'Space Grotesk';
-  }
-  .columnText > a {
-    font-family: 'Work Sans';
-  }
+.modernButton:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: translateY(-2px);
 }
 
-.splitColumn:nth-child(2) {
-  .columnText > h1{
-    font-family: 'Lilita One', sans-serif;
-  }
-  .columnText > p {
-    font-family: 'Sora';
-  }
-  .columnText > a {
-    font-family: 'Poppins';
-  }
-}
-
-.pro:hover {
-  background-image: linear-gradient(#000000a3, #000415cc), url("/home/professional.webp");
-  
-  .columnText{
-    background: rgba(0,0,0,0.2);
-    backdrop-filter: blur(5px);
-  }
-}
-
-.personal:hover {
-  background-image: linear-gradient(#ffffff18, #000000e5),  url("/home/personal.webp");
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-
-  .columnText{
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(5px);
-  }
+.personalBtn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
 }
 
 @media (max-width: 768px) {
   .splitSection {
     flex-direction: column;
-    height: 100vh;
   }
   .splitColumn {
-    width: 100%;
-    height: 50%;
+    width: 100% !important;
+    height: 50vh;
   }
-  .splitColumn:hover {
-    width: 100%;
+  .textGroup h1 {
+    font-size: 2.5rem;
   }
 }

@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { Analytics } from "@vercel/analytics/next";
 import Script from 'next/script';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 // app/layout.js
 
 export default function GlobalLayout({ title, description, children }) {
@@ -19,6 +21,8 @@ export default function GlobalLayout({ title, description, children }) {
         "https://linkedin.com/in/milan-avorque-82a860320"
       ]
   };
+
+  const router = useRouter();
 
   return (
     <>
@@ -40,23 +44,32 @@ export default function GlobalLayout({ title, description, children }) {
               __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
             }}
           />
-          {/* ... */}
-
         </Head>
 
-        <body>
-          {children}
-          <Script id="va-init" strategy="afterInteractive">
-            {`window.va = window.va || function(){(window.vaq = window.vaq || []).push(arguments);};`}
-          </Script>
-          <Script
-            src="/analy/script.js"
-            data-endpoint="/analy"
-            async
-            strategy="lazyOnload"
-          />
-          
-        </body>
+        <div className="noise-overlay" />
+        
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={router.route}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+
+        <Script id="va-init" strategy="afterInteractive">
+          {`window.va = window.va || function(){(window.vaq = window.vaq || []).push(arguments);};`}
+        </Script>
+        <Script
+          src="/analy/script.js"
+          data-endpoint="/analy"
+          async
+          strategy="lazyOnload"
+        />
+        <Analytics />
     </>
-  )
+  );
 }

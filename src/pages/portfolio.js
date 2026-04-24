@@ -1,3 +1,4 @@
+import styles from '../styles/Pro.module.css';
 import SkillWheel from '../components/SkillWheel';
 // import certificationsData from '../data/certifications.json';
 // import skillsData from '../data/skills.json';
@@ -43,147 +44,99 @@ export async function getStaticProps() {
 export default function ProfessionalPage({skillsData, certificationsData, projectsData, formattedDate }) {
   return (
     <Layout>
-        <main className="container py-5">
+        <main className={`${styles.main} container py-5`}>
             <header className="text-center mb-5">
-                <h1 className="display-4 nameHeader">Milan Avorque</h1>
-                <p className="lead">Web Developer • IT Support</p>
+                <h1 className={styles.nameHeader}>Milan Avorque</h1>
+                <p className="lead text-secondary">Web Developer • IT Support Specialist</p>
             </header>
-            <section id="intro" className='mb-5'>
+
+            <section id="intro" className={styles.introSection}>
                 <div className='text-center'>
                     <p>
-                        Hey there! I&apos;m Milan Avorque. I bring a unique blend of skills as a <b>web developer</b> and 
-                        <b> IT support specialist</b>. After a year of full-time <b>PHP/jQuery</b> development, and another year of
-                        full-stack <b>ASP.NET MVC</b> development,
-                        I spent three years sharpening my problem-solving abilities in IT support, and getting various
-                        certifications to support
-                        My passion for development continues through freelance work and learning <b>Next.js</b>.
+                        Hey there! I'm Milan Avorque. I bring a unique blend of skills as a <b>web developer</b> and 
+                        <b> IT support specialist</b>. With experience in <b>PHP, jQuery</b>, and <b>ASP.NET MVC</b>,
+                        I spent three years sharpening my problem-solving abilities in IT support, while maintaining
+                        my passion for development through freelance work and <b>Next.js</b>.
                     </p>
                     <p>
-                        I&apos;ve earned multiple Google Specializations in <strong>Data Analytics, UX Design, and Project Management</strong> to broaden my expertise and find areas I truly enjoy. This diverse learning journey continually enhances my <strong>programming and IT support problem-solving</strong> skills, proving especially invaluable for <strong>understanding client needs and independently managing projects</strong> in my day job, where I often handle requests solo due to limited team size. While I also contribute to side projects as part of a team, these certifications help me excel across all my work.
-                    </p>
-                    <p>
-                        I&apos;m currently looking for <b>home-based</b> or <b>part-time roles</b> where I can contribute my versatile tech background.
+                        I've earned multiple Google Specializations in <strong>Data Analytics, UX Design, and Project Management</strong>. 
+                        This diverse journey enhances my <strong>programming and IT support</strong> skills, 
+                        enabling me to understand client needs and independently manage complex projects.
                     </p>
                 </div>
-                <hr />
-                <div className="d-flex justify-content-center align-items-center gap-3">
-                    <a href="mailto:milan.avorque@gmail.com" className="footer-link">
+                
+                <div className={styles.socialLinks}>
+                    <a href="mailto:milan.avorque@gmail.com" className={styles.footerLink}>
                         <FiMail size={20} /> Email
                     </a>
-                    <a href="https://github.com/atsukiri" target="_blank" className="footer-link" rel="noopener noreferrer">
+                    <a href="https://github.com/atsukiri" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
                         <FiGithub size={20} /> GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className="footer-link" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
                         <FiLinkedin size={20} /> LinkedIn
                     </a>
-                    <a href="/resume.pdf" target="_blank" className="footer-link">
+                    <a href="/resume.pdf" target="_blank" className={styles.footerLink}>
                         <FiDownload size={20} /> Resume
                     </a>
                 </div>
             </section>
-            <section id="about" className="mb-5 d-none">
-                <h1 className="sectionHeader">About Me</h1>
-                <hr />
-                <p>
-                I began my career as a full-time programmer, working with PHP and jQuery to build web systems. After a year, 
-                I joined my current company where I initially developed using ASP.NET and jQuery, and later explored React.js for front-end work.
-                I was eventually promoted to an IT Support role, where I’ve been focused for the past three years. While I no longer develop full systems 
-                in this position, I occasionally handle maintenance and bug fixes.
-                Outside of work, I sometimes collaborate as a part-time side hustle on freelance projects typically assisting with specific areas like feature implementation, bug fixing, 
-                or enhancements using PHP, jQuery, and CodeIgniter. I’m currently expanding my skill set with Next.js through this portfolio.
-                I enjoy both programming and IT support for the satisfaction they bring when solving problems and delivering working solutions.
-                    {/* Optional: Keep strictly professional; personal hobbies should wait for the personal portfolio. */}
-                    {/* <!-- If you want, you could mention you're seeking home-based or part-time roles due to your current commitments. --> */}
-                </p>
-                <p>
-                    For now, I’m currently looking for <strong>home-based</strong> or <strong>part-time</strong> roles due to personal limitations,
-                    while I continue my current position to manage financial commitments.
-                </p>
-            </section>
 
-            <section id="skills" className="mb-5 text-md-start text-center">
-                {/* <h2>Skills</h2>
-                <div className="d-flex flex-wrap justify-content-center">
-                {skillsData.map((skill) => (
-                    <SkillWheel key={skill.name} {...skill} />
-                ))}
-                </div> */}
-                 <h1>Skills</h1>
-                 <hr />
-                 <div className='row'>
+            <section id="skills" className="mb-5">
+                <h1 className={styles.sectionHeader}>Expertise</h1>
+                <div className='row g-4'>
                     {Object.entries(skillsData).map(([cat, arr]) => (
-                        <div key={cat} className="mb-4 col-md-6 text-xs-center text-md-left">
-                            <h3 className=''>{cat}</h3>
-                            <hr className='my-2' />
-                            <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
-                                {arr.map(skill => <div className='mb-2' key={skill.name}>
-                                    <div className='d-flex align-items-center justify-content-center justify-content-md-start'>
-                                        <h5 className='me-2 m-0 d-inline fw-bold'>{skill.name}</h5>
-                                        <span style={{fontSize:10}} className={'badge bg-'+(skill.experienceLevel == "Proficient" ? "warning text-dark" : (skill.experienceLevel == "Intermediate" ? "primary" : "success"))+' d-inline badge-pill'}>{skill.experienceLevel}</span>
-                                    </div>
-                                    <div>{skill.description}</div>
-                                </div>)} 
-                                {/* <SkillWheel key={skill.name} {...skill} /> */}
-                            </div>  
+                        <div key={cat} className="col-md-6">
+                            <div className={`${styles.skillCategory} glass-card`}>
+                                <h3>{cat}</h3>
+                                <div className="d-flex flex-wrap gap-2">
+                                    {arr.map(skill => (
+                                        <div key={skill.name} className={`${styles.skillBadge} ${skill.experienceLevel.toLowerCase()}`}>
+                                            {skill.name}
+                                        </div>
+                                    ))} 
+                                </div>  
+                            </div>
                         </div>
-                ))}
+                    ))}
                 </div>
             </section>
+
             <section id="certifications" className="mb-5">
-                <h1>Certifications</h1>
-                <hr />
-                <div className='row'>
-                    
+                <h1 className={styles.sectionHeader}>Certifications</h1>
+                <div className='row g-4'>
                     {Object.entries(certificationsData).map(([category, items]) => (
-                    <div key={category} className="col-md-6 mb-4">
-                        <h3>{category}</h3>
-                        <ul className="list-unstyled">
-                        {items.map((cert) => (
-                            <li className="cert-item" key={cert.title}>
-                                <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                                    {cert.title}
-                                </a>
-                                {
-                                    cert.link ? <FaExternalLinkAlt className='ms-1' color="#FFFFFF" /> : ""
-                                }
-                                <span>• {cert.issuer}</span>
-                                {cert.description && <span>– {cert.description}</span>}
-                            </li>
-                            // <li key={cert.title}>
-                            // {cert.link ? (
-                            //     <>
-                            //     <FaExternalLinkAlt /> <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                            //     {cert.title} 
-                            //     </a>
-                            //     </>
-                            // ) : (
-                            //     <span>{cert.title}</span>
-                            // )}
-                            // {' '}• {cert.issuer}
-                            // {cert.description && <> – {cert.description}</>}
-                            // </li>
-                        ))}
-                        </ul>
-                    </div>
+                        <div key={category} className="col-md-6">
+                            <div className="glass-card p-4 h-100">
+                                <h3 className="text-primary mb-3">{category}</h3>
+                                <ul className="list-unstyled mb-0">
+                                    {items.map((cert) => (
+                                        <li className={styles.certItem} key={cert.title}>
+                                            <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                                                {cert.title} {cert.link && <FaExternalLinkAlt size={12} className='ms-1' />}
+                                            </a>
+                                            <span>{cert.issuer} {cert.description && `– ${cert.description}`}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </section>
             
             <section id="projects" className="mb-5">
-                <h1>What I’ve Built</h1>
-                <hr />
-                <div className="row">
+                <h1 className={styles.sectionHeader}>Featured Work</h1>
+                <div className="row g-4">
                     {projectsData.map((project) => (
                         <ProjectCard key={project.title} {...project} />
                     ))}
                 </div>
             </section>
 
-            <footer className="py-4 mt-auto text-center">
-                <hr className='my-2' />
-                <p className="text-gold" style={{ fontSize: '0.875rem' }}>
-                    © <Link href="/">Milan Avorque</Link>  - 2025 | Last updated: { formattedDate } 
-                </p>
+            <footer className={styles.footer}>
+                <div className="text-center">
+                    <p>© {new Date().getFullYear()} <Link href="/" className="text-primary">Milan Avorque</Link> | Last updated: { formattedDate }</p>
+                </div>
             </footer>
         </main>
     </Layout>
