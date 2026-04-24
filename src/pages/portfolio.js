@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Layout from '../components/ProLayout'
 import ProjectCard from '../components/ProjectCard';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { FiMail,FiGithub, FiDownload, FiLinkedin, FiX, FiFacebook } from 'react-icons/fi';
+import { FiMail, FiGithub, FiDownload, FiLinkedin, FiX, FiFacebook } from 'react-icons/fi';
 import fs from 'fs';
 import path from 'path';
 
@@ -15,130 +15,130 @@ export async function getStaticProps() {
     const skillsFilePath = path.join(process.cwd(), 'src', 'data', 'skills.json');
     const certificationsFilePath = path.join(process.cwd(), 'src', 'data', 'certifications.json');
     const projectsFilePath = path.join(process.cwd(), 'src', 'data', 'projects.json');
-    
+
     const skillsData = JSON.parse(fs.readFileSync(skillsFilePath, 'utf-8'));
     const certificationsData = JSON.parse(fs.readFileSync(certificationsFilePath, 'utf-8'));
     const projectsData = JSON.parse(fs.readFileSync(projectsFilePath, 'utf-8'));
 
     const formattedDate = new Date().toLocaleString('en-US', {
-        timeZone: 'Asia/Manila',       
+        timeZone: 'Asia/Manila',
         year: 'numeric',
         month: 'long',
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
         hour12: true,
-      }) + " GMT+8";
+    }) + " GMT+8";
 
     return {
-      props: {
-        skillsData,
-        certificationsData,
-        projectsData,
-        formattedDate
-      }
+        props: {
+            skillsData,
+            certificationsData,
+            projectsData,
+            formattedDate
+        }
     };
-  }
+}
 
-  
-export default function ProfessionalPage({skillsData, certificationsData, projectsData, formattedDate }) {
-  return (
-    <Layout>
-        <main className={`${styles.main} container py-5`}>
-            <header className="text-center mb-5">
-                <h1 className={styles.nameHeader}>Milan Avorque</h1>
-                <p className="lead text-secondary">Web Developer • IT Support Specialist</p>
-            </header>
 
-            <section id="intro" className={styles.introSection}>
-                <div className='text-center'>
-                    <p>
-                        Hey there! I'm Milan Avorque. I bring a unique blend of skills as a <b>web developer</b> and 
-                        <b> IT support specialist</b>. With experience in <b>PHP, jQuery</b>, and <b>ASP.NET MVC</b>,
-                        I spent three years sharpening my problem-solving abilities in IT support, while maintaining
-                        my passion for development through freelance work and <b>Next.js</b>.
-                    </p>
-                    <p>
-                        I've earned multiple Google Specializations in <strong>Data Analytics, UX Design, and Project Management</strong>. 
-                        This diverse journey enhances my <strong>programming and IT support</strong> skills, 
-                        enabling me to understand client needs and independently manage complex projects.
-                    </p>
-                </div>
-                
-                <div className={styles.socialLinks}>
-                    <a href="mailto:milan.avorque@gmail.com" className={styles.footerLink}>
-                        <FiMail size={20} /> Email
-                    </a>
-                    <a href="https://github.com/atsukiri" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
-                        <FiGithub size={20} /> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
-                        <FiLinkedin size={20} /> LinkedIn
-                    </a>
-                    <a href="/resume.pdf" target="_blank" className={styles.footerLink}>
-                        <FiDownload size={20} /> Resume
-                    </a>
-                </div>
-            </section>
+export default function ProfessionalPage({ skillsData, certificationsData, projectsData, formattedDate }) {
+    return (
+        <Layout>
+            <main className={`${styles.main} container py-5`}>
+                <header className="text-center mb-5">
+                    <h1 className={styles.nameHeader}>Milan Avorque</h1>
+                    <p className="lead text-secondary">Web Developer • IT Support Specialist</p>
+                </header>
 
-            <section id="skills" className="mb-5">
-                <h1 className={styles.sectionHeader}>Expertise</h1>
-                <div className='row g-4'>
-                    {Object.entries(skillsData).map(([cat, arr]) => (
-                        <div key={cat} className="col-md-6">
-                            <div className={`${styles.skillCategory} glass-card`}>
-                                <h3>{cat}</h3>
-                                <div className="d-flex flex-wrap gap-2">
-                                    {arr.map(skill => (
-                                        <div key={skill.name} className={`${styles.skillBadge} ${skill.experienceLevel.toLowerCase()}`}>
-                                            {skill.name}
-                                        </div>
-                                    ))} 
-                                </div>  
+                <section id="intro" className={styles.introSection}>
+                    <div className='text-center'>
+                        <p>
+                            Hey there! I&apos;m Milan Avorque. I bring a unique blend of skills as a <b>web developer</b> and
+                            <b> IT support specialist</b>. With experience in <b>PHP, jQuery</b>, and <b>ASP.NET MVC</b>,
+                            I spent three years sharpening my problem-solving abilities in IT support, while maintaining
+                            my passion for development through freelance work and <b>Next.js</b>.
+                        </p>
+                        <p>
+                            I&apos;ve earned multiple Google Specializations in <strong>Data Analytics, UX Design, and Project Management</strong>.
+                            This diverse journey enhances my <strong>programming and IT support</strong> skills,
+                            enabling me to understand client needs and independently manage complex projects.
+                        </p>
+                    </div>
+
+                    <div className={styles.socialLinks}>
+                        <a href="mailto:milan.avorque@gmail.com" className={styles.footerLink}>
+                            <FiMail size={20} /> Email
+                        </a>
+                        <a href="https://github.com/atsukiri" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
+                            <FiGithub size={20} /> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/milan-avorque-82a860320/" target="_blank" className={styles.footerLink} rel="noopener noreferrer">
+                            <FiLinkedin size={20} /> LinkedIn
+                        </a>
+                        <a href="/resume.pdf" target="_blank" className={styles.footerLink}>
+                            <FiDownload size={20} /> Resume
+                        </a>
+                    </div>
+                </section>
+
+                <section id="skills" className="mb-5">
+                    <h1 className={styles.sectionHeader}>Expertise</h1>
+                    <div className='row g-4'>
+                        {Object.entries(skillsData).map(([cat, arr]) => (
+                            <div key={cat} className="col-md-6">
+                                <div className={`${styles.skillCategory} glass-card`}>
+                                    <h3>{cat}</h3>
+                                    <div className="d-flex flex-wrap gap-2">
+                                        {arr.map(skill => (
+                                            <div key={skill.name} className={`${styles.skillBadge} ${skill.experienceLevel.toLowerCase()}`}>
+                                                {skill.name}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+                        ))}
+                    </div>
+                </section>
 
-            <section id="certifications" className="mb-5">
-                <h1 className={styles.sectionHeader}>Certifications</h1>
-                <div className='row g-4'>
-                    {Object.entries(certificationsData).map(([category, items]) => (
-                        <div key={category} className="col-md-6">
-                            <div className="glass-card p-4 h-100">
-                                <h3 className="text-primary mb-3">{category}</h3>
-                                <ul className="list-unstyled mb-0">
-                                    {items.map((cert) => (
-                                        <li className={styles.certItem} key={cert.title}>
-                                            <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                                                {cert.title} {cert.link && <FaExternalLinkAlt size={12} className='ms-1' />}
-                                            </a>
-                                            <span>{cert.issuer} {cert.description && `– ${cert.description}`}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                <section id="certifications" className="mb-5">
+                    <h1 className={styles.sectionHeader}>Certifications</h1>
+                    <div className='row g-4'>
+                        {Object.entries(certificationsData).map(([category, items]) => (
+                            <div key={category} className="col-md-6">
+                                <div className="glass-card p-4 h-100">
+                                    <h3 className="text-primary mb-3">{category}</h3>
+                                    <ul className="list-unstyled mb-0">
+                                        {items.map((cert) => (
+                                            <li className={styles.certItem} key={cert.title}>
+                                                <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                                                    {cert.title} {cert.link && <FaExternalLinkAlt size={12} className='ms-1' />}
+                                                </a>
+                                                <span>{cert.issuer} {cert.description && `– ${cert.description}`}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-            
-            <section id="projects" className="mb-5">
-                <h1 className={styles.sectionHeader}>Featured Work</h1>
-                <div className="row g-4">
-                    {projectsData.map((project) => (
-                        <ProjectCard key={project.title} {...project} />
-                    ))}
-                </div>
-            </section>
+                        ))}
+                    </div>
+                </section>
 
-            <footer className={styles.footer}>
-                <div className="text-center">
-                    <p>© {new Date().getFullYear()} <Link href="/" className="text-primary">Milan Avorque</Link> | Last updated: { formattedDate }</p>
-                </div>
-            </footer>
-        </main>
-    </Layout>
-  );
+                <section id="projects" className="mb-5">
+                    <h1 className={styles.sectionHeader}>Featured Work</h1>
+                    <div className="row g-4">
+                        {projectsData.map((project) => (
+                            <ProjectCard key={project.title} {...project} />
+                        ))}
+                    </div>
+                </section>
+
+                <footer className={styles.footer}>
+                    <div className="text-center">
+                        <p>© {new Date().getFullYear()} <Link href="/" className="text-primary">Milan Avorque</Link> | Last updated: {formattedDate}</p>
+                    </div>
+                </footer>
+            </main>
+        </Layout>
+    );
 }
