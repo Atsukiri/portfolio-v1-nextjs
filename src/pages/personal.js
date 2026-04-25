@@ -3,8 +3,29 @@ import DynamicGallery from '../components/DynamicLibrary';
 import CommissionBox from '../components/CommissionBox';
 import GlobalLayout from '../components/GlobalLayout';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { db } from '../lib/firebase';
+import { collection, query, orderBy, limit, onSnapshot } from 'firebase/firestore';
 
 export default function PersonalPage() {
+  const [posts, setPosts] = useState([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+
+  useEffect(() => {
+    const q = query(
+      collection(db, 'journal_posts'),
+      orderBy('createdAt', 'desc'),
+      limit(5)
+    );
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      setPosts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setLoadingPosts(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <GlobalLayout title="Creative Playground" description="Explore my art, games, and personal journal.">
       <div className="personal-page">
@@ -52,28 +73,43 @@ export default function PersonalPage() {
           </section>
 
           {/* ✍️ Commission / Contact */}
-          <section className="mb-5 row">
+          <section className="mb-5 row g-4">
             <div className="col-md-7">
               <div className="d-flex align-items-center gap-3 mb-4">
                 <h2 className="m-0" style={{ color: '#ee854a', fontSize: '2.5rem' }}>Commissions</h2>
               </div>
-              <div className="glass-card p-5">
+              <div className="glass-card p-5 h-100">
                 <CommissionBox />
               </div>
             </div>
             
-            {/* 🧩 Games / Journal Links */}
+            {/* 🧩 Journal section */}
             <div className="col-md-5">
               <div className="d-flex align-items-center gap-3 mb-4">
                 <h2 className="m-0" style={{ color: '#6c9f71', fontSize: '2.5rem' }}>Journal</h2>
               </div>
-              <div className="glass-card p-5 h-100 d-flex flex-column justify-content-center text-center">
-                <p className="text-secondary fs-5">
-                  Chronicles of my latest game sessions and personal journal updates.
-                </p>
-                <div className="mt-4 p-3 border border-dashed rounded text-muted">
-                  Coming Soon
-                </div>
+              <div className="glass-card p-4 h-100 overflow-auto" style={{ maxHeight: '600px' }}>
+                {loadingPosts ? (
+                  <div className="text-center py-4">Loading journal...</div>
+                ) : posts.length > 0 ? (
+                  <div className="posts-list">
+                    {posts.map((post) => (
+                      <div key={post.id} className="post-item mb-4 pb-4 border-bottom border-secondary">
+                        <h4 className="font-heading text-primary mb-2">{post.title}</h4>
+                        <p className="text-secondary small mb-3">
+                          {post.createdAt?.toDate().toLocaleDateString('en-US', { 
+                            month: 'long', day: 'numeric', year: 'numeric' 
+                          })}
+                        </p>
+                        <p className="text-secondary" style={{ whiteSpace: 'pre-wrap' }}>{post.content}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-5 text-muted italic">
+                    No entries yet. Check back soon!
+                  </div>
+                )}
               </div>
             </div>
           </section>
