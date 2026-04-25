@@ -1,5 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 export default function ProjectCard({ title, description, image, repoUrl, liveUrl, tags }) {
 
@@ -21,11 +22,12 @@ export default function ProjectCard({ title, description, image, repoUrl, liveUr
       <div className="glass-card h-100 d-flex flex-column overflow-hidden">
         {image && (
           <div className="position-relative overflow-hidden" style={{ height: '200px' }}>
-            <img
+            <Image
               src={image}
               alt={title}
-              className="w-100 h-100"
+              fill
               style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
         )}
